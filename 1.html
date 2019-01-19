@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 
+ </body>
+ <script type="text/javascript">
+ 	// function getSub(x,y){
+ 	// 	return x - y;
+ 	// }
+ 	// console.log(getSub(10,20));
+ 	function getArrayMax(array){
+ 		//假设这个变量里存储的是最大值
+ 		var max = array[0];
+ 		for(var i=0 ; i<array.length;i++){
+ 			if(max < array[i]){
+ 				max = array[i];
+ 			}
+ 		}
+ 		return max;
+ 	}
+ 	//测试---- 调用函数并传入一个数组，把数组中最大的数直接显示出来
+ 	var arr = [10,20,30,40,50];
+ 	var max = getArrayMax(arr);
+ 	console.log(max);
+
+ 	function getArrayMin(array){
+ 		//假设这个变量里存储的是最小值
+ 		var min = array[0];
+ 		for(var i = 0; i < array.length;i++){
+ 			if(min > array[i]){
+ 				min = array[i];
+
+ 			}
+ 		}
+ 		return min;
+ 	}
+ 	//测试---- 调用函数并传入一个数组，把数组中最小的数直接显示出来
+ 	console.log(getArrayMin([10,20,30,40,1]));
+ 	//求一组数字的和
+ 	function getArraySum(array){
+ 		
+ 		var sum = 0;
+ 		for(var i = 0; i < array.length;i++){
+
+ 			sum += array[i];
+ 		}
+ 		return sum;
+ 	}
+ 	console.log(getArraySum(arr));
+ 	/*
+ 	给我一个数组，我返回一个数组（最大值，最小值，和）
+ 	array参数是一个数组
+ 	返回值是一个数组，第一个元素是最大值，第二个元素是最小值，第三个元素是和
+ 	*/
+ 	function getArrayMaxAndMinAndSum(array){
+ 		var max = array[0];
+ 		var min = array[0];
+ 		var sum = 0;
+ 		for( var i = 0; i <array.length;i++){
+ 			if(max < array[i]){
+ 				max = array[i];
+ 			}
+ 			else if(min > array[i]){
+ 				min = array[i];
+
+ 			}
+ 			sum += array[i];
+ 		}
+ 		var arr = [max,min,sum];
+ 		return arr
+ 	}
+ 	//测试
+ 	var resultArray = getArrayMaxAndMinAndSum([1,2,3,4,5,6,7,8]);
+ 	console.log("最大值"+resultArray[0]);
+ 	console.log("最小值"+resultArray[1]);
+ 	console.log("和"+resultArray[2]);
+
+ </script>
+ </html> 
