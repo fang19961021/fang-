@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	//求两个数中的最大值
+	function getMax(num1,num2){
+		return num1 > num2 ? num1 : num2;
+	}
+	console.log(getMax(1,2));
+	//求3个数中的最大值
+	function getThreeMax(x,y,z){
+		return x > y ? (x > z ? x : z ) : (y > z ? y : z);
+	}
+	console.log(getThreeMax(10,2,24));
+	//判断一个数是否是质数
+	function isPrimeNumber(num){
+		for(var i = 0;i<num;i++){
+			if(num%1==0){
+				return false;
+			}
+		}
+		return true;
+	}
+</script>
+</html>
